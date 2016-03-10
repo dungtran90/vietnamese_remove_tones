@@ -133,7 +133,7 @@ def get_unicode_dict():
 
 
 def vnese_rm_tones(str_need_convert):
-    if isinstance(str_need_convert, (basestring, str)):
+    if isinstance(str_need_convert, (str)):
         r = re.compile("|".join(REPLACES_DICT_STR.keys()))
         return r.sub(lambda m: REPLACES_DICT_STR[m.group(0)], str_need_convert)
     if isinstance(str_need_convert, unicode):
